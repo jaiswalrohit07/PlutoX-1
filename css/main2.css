@@ -507,9 +507,10 @@ input {
 }
 
 .card-3 .card-body {
-  padding: 0px 0px;
-  padding-bottom: 0px;
+  padding: 60px 50px;
+  padding-bottom: 40px;
   display: table-cell;
+  height: 60vh;
 }
 
 @media (max-width: 767px) {
@@ -532,7 +533,7 @@ input {
 
 
 .wrapper {
-  max-width: 1300px;
+  max-width: 1500px;
   width: 100%;
   margin: 0 px;
   position: relative;
@@ -671,3 +672,13 @@ input {
   right: 50%;
 }
 
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+section {
+  height: 100vh;
+  padding-top: 20vh;
+  scroll-snap-align:center;
+}
