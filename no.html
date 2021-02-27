@@ -86,8 +86,16 @@
                             <input class="input--style-3" type="number" placeholder="Mobile Number" name="phone">
                         </div>-->
                         <div class="p-t-10">
-                            <button class="btn btn--pill btn--green" type="submit" ><a href="congrats.html">Register</button></a>
-                            <button class="btn btn--pill btn--green" type="submit" ><a href="buy.html">Prev</button></a>
+                        <form method="POST" action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSec8wQfpacmU-cixsU2YCt8EJL9f6-5QuafGE7o-04HIQa7nQ/formResponse">
+                             <input class="input--style-3" type="text" name="entry.148777889" id = "name" style = "height: 0; top:0;position:absolute;opacity:0">
+                             <input class="input--style-3" type="number" name="entry.223837446" id = "num" style = "height: 0;top:0;position:absolute;opacity:0">
+                             <input class="input--style-3" type="email"  name="entry.1205059580" id="mail" style = "height : 0;top:0;position:absolute;opacity:0">
+                             <input class="input--style-3" type="name" name="entry.1586985588" id = "branch" style = "height : 0;top:0;position:absolute;opacity:0">
+                             <input class="input--style-3" type="number" name="entry.598561451" id = "ys" style = "height : 0;top:0;position:absolute;opacity:0">
+                              <input class="input--style-3" type="number"  name="entry.1382236625" id  = "mob" style = "height = 0;top:0;position:absolute;opacity:0"> 
+                                <input class="input--style-3" type="name"  name="entry.498263781" id  = "drone" style = "height = 0;top:0;position:absolute;opacity:0"> 
+                            <a href="congrats.html"><button class="btn btn--pill btn--green" type="submit" style = "margin-bottom:5px;" >Register</button></a></form>
+                            <a href="buy.html"><button class="btn btn--pill btn--green" type="submit" >Prev</button></a>
                         </div>
                     </form> -->
                 </div>
@@ -105,6 +113,16 @@
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
+    <script>
+    document.getElementById("name").setAttribute("value", localStorage.name);
+    document.getElementById("num").setAttribute("value", localStorage.num);
+    document.getElementById("mail").setAttribute("value", localStorage.mail);
+    document.getElementById("branch").setAttribute("value", localStorage.branch);
+    document.getElementById("ys").setAttribute("value", localStorage.ys);
+    document.getElementById("mob").setAttribute("value", localStorage.mob);
+    document.getElementById("drone").setAttribute("value", localStorage.drone);
+    
+    </script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
