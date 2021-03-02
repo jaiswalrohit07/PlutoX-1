@@ -47,7 +47,12 @@
                    <br>
                    <br>
                     <div class="p-t-10">
-                       <button class="btn btn--pill btn--green" onclick = "dronefunc1()" >Yes</button>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='warning.html';}"></iframe>
+                     <form method="POST" action = "https://docs.google.com/forms/u/1/d/e/1FAIpQLScqVxMcuR7jNArkofMynJqHF1mSZhqhMr3Kurs2DPMocATEUQ/formResponse" target="hidden_iframe" onsubmit = "submitted=true;">  
+ 	  <input class="input--style-3" type="text" name="entry.2098543273" id = "nam" style = "height: 0; top:0;position:absolute;opacity:0;width:0">
+ 	  <input class="input--style-3" type="email"  name="entry.1980186104" id="mail" style = "height : 0;top:0;position:absolute;opacity:0;width:0">
+                       <button class="btn btn--pill btn--green" >Yes</button>
+                       </form>
                         <!-- <button class="btn btn--pill btn--green" type="submit"  onclick = "dronefunc2()"><a href="no.html">Can't buy right now </button></a> -->
                     </div>
                     <div class="p-t-10">
@@ -63,7 +68,7 @@
                    <div style = "top : 0vh; left: 0vw; position:fixed; width: 100vw;height: 100vh; background: black" class = " invisible" id = "modal">
                    <div style = " top: 30vh; left: 20vw;position : fixed; right: 10vw">
                    <p style = "color: white" id = "warning-text">The discount coupon will be sent to your mail ID, if recieved click proceed, if not contact the following person : +91 79727 80001 (Aman Malekar), you will be automatically redirected to the next page in 10 seconds. </p>
-       
+
         <a href = "yes.html"> <button type="button" class="btn btn--pill btn--green" style = "margin-top:30px" id = "warning-button" >Proceed</button> </a>
        </div>              
 </div>
@@ -113,7 +118,8 @@
 
     <!-- Jquery JS-->
     <script>
-   
+    document.getElementById("nam").setAttribute("value", localStorage.name);
+    document.getElementById("mail").setAttribute("value", localStorage.mail);
     function dronefunc1(){
      console.log("here");
     localStorage.setItem("drone", "yes");
