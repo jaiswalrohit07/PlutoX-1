@@ -33,18 +33,19 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Registration Details </h2>
- 			<form> <!--method="POST" action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSec8wQfpacmU-cixsU2YCt8EJL9f6-5QuafGE7o-04HIQa7nQ/formResponse">-->
+                    <h2 class="title">Registration Details </h2> <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='buy.html';}"></iframe>
+                        <form  target="hidden_iframe" onsubmit = "submitted=true;">
+
                         <div class="input-group">
-                            <input class="input--style-3" type="text" placeholder="Name" name="entry.148777889" id = "name">
+                            <input class="input--style-3" type="text" placeholder="Name" name="entry.148777889" id = "name"  required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="number" placeholder="Roll Number" name="entry.223837446" id = "num">
+                            <input class="input--style-3" type="text" placeholder="Roll Number" name="entry.223837446" id = "num"  required>
                         </div>
                         <!-- <div class="input-group">
                             <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
                             <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                        </div> -->
+                        </div> --> 
                         <!-- <div class="input-group">
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="gender">
@@ -57,23 +58,24 @@
                             </div>
                         </div> -->
                         <div class="input-group">
-                            <input class="input--style-3" type="email" placeholder="Email" name="entry.1205059580" id="mail" >
+                            <input class="input--style-3" type="email" placeholder="Email" name="entry.1205059580" id="mail"  required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="name" placeholder="Branch" name="entry.1586985588" id = "branch">
+                            <input class="input--style-3" type="name" placeholder="Branch" name="entry.1586985588" id = "branch" required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="number" placeholder="Year of Study" name="entry.598561451" id = "ys">
+                            <input class="input--style-3" type="number" placeholder="Year of Study" name="entry.598561451" id = "ys"  required>
                         </div>
                         <div class="input-group">
-                            <input class="input--style-3" type="number" placeholder="Mobile Number" name="entry.1382236625" id  = "mob">
+                            <input class="input--style-3" type="number" placeholder="Mobile Number" name="entry.1382236625" id  = "mob"  required>
                         </div>
-                        </form>
+                        
                         <div class="p-t-10">
-                            <a href = "buy.html"><button class="btn btn--pill btn--green" type = "submit" onclick="formstorage()">Submit</button></a>
-                           <a href="index.html"> <button class="btn btn--pill btn--green"  >Prev</button></a>
+                          <button class="btn btn--pill btn--green" type = "submit" onclick="formstorage()">Submit</button>
+                          <a href = "index.html"><button class="btn btn--pill btn--green" type ="button" >Prev</button></a>
                         </div>
-                    
+                    </form>
+                     
                 </div>
             </div>
         </div>
