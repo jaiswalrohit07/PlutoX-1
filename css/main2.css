@@ -9,6 +9,13 @@
 .font-poppins {
   font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
 }
+p{
+  font-size: 20px;
+}
+.invisible{
+  display: none;
+}
+	
 
 /* ==========================================================================
    #GRID
@@ -186,9 +193,6 @@ h6 {
   padding-top: 100px;
 }
 
-.p-t-180 {
-  padding-top: 180px;
-}
 
 .p-t-20 {
   padding-top: 20px;
@@ -673,6 +677,15 @@ input {
   right: 50%;
 }
 @media only screen and (min-width: 750px) {
+#warning-text{
+	font-size: 50px !important;
+	
+}
+#warning-button{
+	width:  400px;
+	height: 70px;
+	font-size: 50px !important;
+}
 .card-3 .card-body {
   padding: 60px 50px;
   padding-bottom: 40px;
@@ -694,5 +707,13 @@ section {
 
 .card-container{
 margin-top: 80px;
+}
+.p-t-180 {
+  padding-top: 180px;
+}
+
+}
+#warning-text{
+	font-size: 20px;
 }
 

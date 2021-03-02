@@ -28,6 +28,7 @@
 
     <!-- Main CSS-->
     <link href="css/main2.css" rel="stylesheet" media="all">
+   
 </head>
 
 <body>
@@ -36,21 +37,17 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Buy Drone </h2>
-                    <p style="color: white;" id = "test"><b>Aeromodelling Club:</b> We would recommend that you buy the kit for a better experience in the workshop and this can be used for your future projects as well.</p>
+                    <h2 class="title">Buy Pluto 1.0 </h2>
+                    <p style="color: white; font-size: 20px"><b>Aeromodelling Club:</b> We would recommend that you buy the kit for a better experience in the workshop and this can be used for your future projects as well. <br>And as an added incentive you'll get the drone at a special discounted price of  <b>&#8377 5499</b> only exclusively for this workshop.</p>
                     <br>
-
-                    <p style="color: white;"> Are You willing to buy a drone </p>
-                   <br>
-                   <br>
-                   <br>
-                   <br>
-                   <br>
+		    <br>
+                    <p style="color: white; font-size: 20px" > Hello <span id = "name"></span>, excited to buy your first drone?</p>
+                   
                    <br>
                    <br>
                    <br>
                     <div class="p-t-10">
-                       <a href="yes.html"> <button class="btn btn--pill btn--green" onclick = "dronefunc1()" >Yes</button></a>
+                       <button class="btn btn--pill btn--green" onclick = "dronefunc1()" >Yes</button>
                         <!-- <button class="btn btn--pill btn--green" type="submit"  onclick = "dronefunc2()"><a href="no.html">Can't buy right now </button></a> -->
                     </div>
                     <div class="p-t-10">
@@ -62,7 +59,14 @@
                         
                     </div>
                     
-                    
+                     <!--Custom Modal-->
+                   <div style = "top : 0vh; left: 0vw; position:fixed; width: 100vw;height: 100vh; background: black" class = " invisible" id = "modal">
+                   <div style = " top: 30vh; left: 20vw;position : fixed; right: 10vw">
+                   <p style = "color: white" id = "warning-text">The discount coupon will be sent to your mail ID, if recieved click proceed, if not contact the following person : +91 79727 80001 (Aman Malekar), you will be automatically redirected to the next page in 10 seconds. </p>
+       
+        <a href = "yes.html"> <button type="button" class="btn btn--pill btn--green" style = "margin-top:30px" id = "warning-button" >Proceed</button> </a>
+       </div>              
+</div>
                     
                     <!-- <form method="POST">
                         <div class="input-group">
@@ -109,23 +113,34 @@
 
     <!-- Jquery JS-->
     <script>
+   
     function dronefunc1(){
-    	localStorage.setItem("drone", "yes");
+     console.log("here");
+    localStorage.setItem("drone", "yes");
+    var element = document.getElementById("modal");
+  element.classList.toggle("invisible");
+    setTimeout( win, 10000);
     }
+    function win(){
+     window.open("yes.html","_self"); 
+     }
     function dronefunc2(){
     	localStorage.setItem("drone","no");
     }
+   
     </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
     <script src="vendor/select2/select2.min.js"></script>
     <script src="vendor/datepicker/moment.min.js"></script>
     <script src="vendor/datepicker/daterangepicker.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
 <script>
-	document.getElementById("test").innerHTML = localStorage.getItem("name"); 
+	document.getElementById("name").innerHTML = localStorage.getItem("name"); 
 </script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
